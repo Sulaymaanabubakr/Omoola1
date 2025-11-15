@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop quality medicines, health supplements, and groceries at Omolola Pharmacy & Stores">
+    <title>Shop - Omolola Pharmacy & Stores</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 5L5 12.5V27.5C5 32 20 37.5 20 37.5C20 37.5 35 32 35 27.5V12.5L20 5Z" stroke="#2C5F2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 20C21.6569 20 23 18.6569 23 17C23 15.3431 21.6569 14 20 14C18.3431 14 17 15.3431 17 17C17 18.6569 18.3431 20 20 20Z" stroke="#2C5F2D" stroke-width="2"/>
+                            <path d="M20 20V26M17 23H23" stroke="#2C5F2D" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Omolola Pharmacy</span>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="shop.html" class="active">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <a href="cart.html" class="cart-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 2L7 6M17 2l2 4M1 6h22M3 6l2 15h14l2-15M10 10v6M14 10v6"/>
+                            </svg>
+                            <span class="cart-count">0</span>
+                        </a>
+                        <a href="login.html" class="btn-login">Login</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <h1>Our Product Range</h1>
+            <p>Quality healthcare products delivered to your doorstep</p>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Filters Sidebar -->
+                <aside class="shop-sidebar">
+                    <div class="filter-section">
+                        <h3>Search</h3>
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search products...">
+                            <button type="button" class="search-btn">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="8" cy="8" r="6"/>
+                                    <path d="M12 12l5 5"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="all" checked>
+                                <span>All Products</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="medicines">
+                                <span>Medicines</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="supplements">
+                                <span>Health Supplements</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="groceries">
+                                <span>Groceries</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="personal-care">
+                                <span>Personal Care</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Price Range</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="all" checked>
+                                <span>All Prices</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="0-10">
+                                <span>Under £10</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="10-25">
+                                <span>£10 - £25</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="25-50">
+                                <span>£25 - £50</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="price" value="50+">
+                                <span>Over £50</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Sort By</h3>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A to Z</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="shop-content">
+                    <div class="shop-header">
+                        <p class="results-count">Showing <span id="resultsCount">24</span> products</p>
+                        <button class="mobile-filter-btn">
+                            Filters
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="4" y1="6" x2="16" y2="6"/>
+                                <line x1="4" y1="10" x2="16" y2="10"/>
+                                <line x1="4" y1="14" x2="16" y2="14"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be rendered here by JavaScript -->
+                    </div>
+
+                    <div class="pagination">
+                        <button class="pagination-btn" disabled>Previous</button>
+                        <div class="pagination-numbers">
+                            <button class="pagination-number active">1</button>
+                            <button class="pagination-number">2</button>
+                            <button class="pagination-number">3</button>
+                        </div>
+                        <button class="pagination-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 5L5 12.5V27.5C5 32 20 37.5 20 37.5C20 37.5 35 32 35 27.5V12.5L20 5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 20C21.6569 20 23 18.6569 23 17C23 15.3431 21.6569 14 20 14C18.3431 14 17 15.3431 17 17C17 18.6569 18.3431 20 20 20Z" stroke="white" stroke-width="2"/>
+                            <path d="M20 20V26M17 23H23" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <h3>Omolola Pharmacy</h3>
+                    </div>
+                    <p>Your trusted partner in health and wellness, providing quality medicines and care since 2015.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="#2C5F2D" stroke-width="1.5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#2C5F2D" stroke-width="2"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="admin.html">Admin Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>📍 123 Health Street, Lagos, Nigeria</li>
+                        <li>📞 +234 800 000 0000</li>
+                        <li>✉️ info@omoola.com</li>
+                        <li>🕐 Mon-Sat: 8am - 8pm</li>
+                    </ul>
+                    <div class="license-badge">
+                        <small>Licensed Pharmacy PCN-12345</small>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Omolola Pharmacy & Stores. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>
