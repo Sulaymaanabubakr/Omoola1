@@ -25,7 +25,8 @@ if (adminLoginForm) {
                     window.showNotification('Admin login successful! Redirecting to dashboard...');
                 }
                 
-                // Redirect to Admin Dashboard
+                // Redirect to Admin Dashboard (admin.html)
+                // The dashboard is configured to show Product Management section by default
                 setTimeout(() => {
                     window.location.href = 'admin.html';
                 }, 1500);
@@ -51,7 +52,8 @@ if (adminLoginForm) {
                             window.showNotification('Admin login successful! Redirecting to dashboard...');
                         }
                         
-                        // Redirect to Admin Dashboard
+                        // Redirect to Admin Dashboard (admin.html)
+                        // The dashboard is configured to show Product Management section by default
                         setTimeout(() => {
                             window.location.href = 'admin.html';
                         }, 1500);
