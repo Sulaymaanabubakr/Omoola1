@@ -13,6 +13,7 @@
 </head>
 <body class="admin-body">
     <!-- Admin Access Protection -->
+    <!-- Ensures only logged-in admins can access the dashboard -->
     <script>
         // Check if admin is logged in, redirect to login if not
         if (!sessionStorage.getItem('adminLoggedIn')) {
@@ -34,7 +35,7 @@
         </div>
         
         <nav class="sidebar-nav">
-            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+            <a href="#dashboard" class="nav-item" data-section="dashboard">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="2" y="2" width="7" height="7" rx="1"/>
                     <rect x="11" y="2" width="7" height="7" rx="1"/>
@@ -43,7 +44,7 @@
                 </svg>
                 <span>Dashboard</span>
             </a>
-            <a href="#products" class="nav-item" data-section="products">
+            <a href="#products" class="nav-item active" data-section="products">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M6 2L2 6v12h16V6l-4-4H6zM2 6h16"/>
                 </svg>
@@ -90,7 +91,7 @@
     <!-- Main Content -->
     <main class="admin-main">
         <header class="admin-header">
-            <h1 id="pageTitle">Dashboard</h1>
+            <h1 id="pageTitle">Products</h1>
             <div class="header-actions">
                 <div class="user-info">
                     <span>Admin User</span>
@@ -101,7 +102,7 @@
 
         <div class="admin-content">
             <!-- Dashboard Section -->
-            <section id="dashboard" class="admin-section active">
+            <section id="dashboard" class="admin-section">
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-icon" style="background: rgba(44, 95, 45, 0.1);">
@@ -202,8 +203,8 @@
                 </div>
             </section>
 
-            <!-- Products Section -->
-            <section id="products" class="admin-section">
+            <!-- Products Section - Default view after admin login -->
+            <section id="products" class="admin-section active">
                 <h2 style="margin-bottom: 30px; color: #2C5F2D;">Product Management</h2>
                 
                 <!-- Product Upload Form -->
