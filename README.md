@@ -173,7 +173,7 @@ Copyright © 2024 Omoola Pharmacy & Stores. All rights reserved.
 
 ## 👥 Contact
 
-- **Address**: 123 Health Street, Lagos, Nigeria
+- **Address**: 3, Isaga Bus Stop, Opposite The Gem International School, Owode Yewa, Ogun State.
 - **Phone**: +234 800 000 0000
 - **Email**: info@omoola.com
 - **License**: PCN-12345

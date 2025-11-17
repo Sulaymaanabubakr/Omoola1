@@ -1,7 +1,9 @@
 // Cart Page JavaScript
 
-// Get cart from localStorage
-let cart = JSON.parse(localStorage.getItem('omoola_cart')) || [];
+// Cart state is managed in main.js. We access it via window.cart.
+// The global window.cart is initialized in main.js
+// We use a local constant 'cart' for convenience, which points to window.cart
+const cart = window.cart;
 
 function renderCart() {
     const cartLayout = document.getElementById('cartLayout');
@@ -136,5 +138,11 @@ function proceedToCheckout() {
 
 // Initial render
 document.addEventListener('DOMContentLoaded', () => {
-    renderCart();
+    // Ensure window.cart is available before using it
+    if (window.cart) {
+        renderCart();
+    } else {
+        // Fallback or wait for main.js to load, though main.js should load first
+        console.error("window.cart not found. main.js may not have loaded correctly.");
+    }
 });

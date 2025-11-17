@@ -45,6 +45,7 @@ body {
     background: var(--background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-top: 70px; /* Added to prevent content from being hidden by fixed navbar */
 }
 
 img {
@@ -299,7 +300,7 @@ h4 { font-size: 1.25rem; }
     min-height: 600px;
     display: flex;
     align-items: center;
-    margin-top: 70px;
+    /* margin-top: 70px; Removed as body padding-top handles fixed header offset */
     overflow: hidden;
 }
 
