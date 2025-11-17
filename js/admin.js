@@ -1,5 +1,36 @@
 // Admin Dashboard JavaScript
 
+// Mobile Menu Toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const sidebar = document.querySelector('.admin-sidebar');
+const sidebarOverlay = document.querySelector('.sidebar-overlay');
+
+// Toggle mobile menu
+function toggleMobileMenu() {
+    mobileMenuToggle.classList.toggle('active');
+    sidebar.classList.toggle('active');
+    sidebarOverlay.classList.toggle('active');
+    document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+}
+
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+}
+
+if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', toggleMobileMenu);
+}
+
+// Close mobile menu when clicking a nav item
+function closeMobileMenu() {
+    if (window.innerWidth < 768 && mobileMenuToggle && sidebar && sidebarOverlay) {
+        mobileMenuToggle.classList.remove('active');
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
 // Section Navigation
 const navItems = document.querySelectorAll('.nav-item[data-section]');
 const sections = document.querySelectorAll('.admin-section');
@@ -25,6 +56,9 @@ navItems.forEach(item => {
         // Update page title
         const titleText = item.querySelector('span').textContent;
         pageTitle.textContent = titleText;
+        
+        // Close mobile menu after navigation
+        closeMobileMenu();
     });
 });
 

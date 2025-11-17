@@ -1,14 +1,85 @@
-/* Admin Dashboard Styles */
+/* ============================================
+   Admin Dashboard - Mobile-First Responsive Styles
+   ============================================ */
+
+/* ============================================
+   BASE STYLES (Mobile-First - Default)
+   ============================================ */
 
 .admin-body {
     display: flex;
     background: var(--background-lighter);
     min-height: 100vh;
+    position: relative;
 }
 
-/* Sidebar */
+/* ============================================
+   Mobile Menu Toggle Button
+   ============================================ */
+
+.mobile-menu-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+    width: 3rem;
+    height: 3rem;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.mobile-menu-toggle:hover {
+    background: var(--primary-dark);
+    box-shadow: var(--shadow-hover);
+}
+
+.mobile-menu-toggle svg {
+    color: white;
+}
+
+.mobile-menu-toggle .close-icon {
+    display: none;
+}
+
+.mobile-menu-toggle.active .menu-icon {
+    display: none;
+}
+
+.mobile-menu-toggle.active .close-icon {
+    display: block;
+}
+
+/* ============================================
+   Sidebar - Mobile First (Hidden by Default)
+   ============================================ */
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 .admin-sidebar {
-    width: 260px;
+    width: 280px;
     background: white;
     border-right: 1px solid var(--border-color);
     display: flex;
@@ -16,40 +87,55 @@
     position: fixed;
     height: 100vh;
     overflow-y: auto;
+    z-index: 1000;
+    left: -280px;
+    top: 0;
+    transition: var(--transition);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar.active {
+    left: 0;
 }
 
 .sidebar-header {
-    padding: 25px 20px;
+    padding: 1.5rem 1.25rem;
     border-bottom: 1px solid var(--border-color);
 }
 
 .sidebar-header .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
+}
+
+.sidebar-header .logo svg {
+    flex-shrink: 0;
 }
 
 .sidebar-header .logo span {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--primary-color);
 }
 
 .sidebar-nav {
     flex: 1;
-    padding: 20px 0;
+    padding: 1.25rem 0;
 }
 
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 20px;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
     color: var(--text-dark);
     font-size: 0.95rem;
     transition: var(--transition);
     border-left: 3px solid transparent;
+    text-decoration: none;
+    min-height: 48px; /* Touch-friendly height */
 }
 
 .nav-item:hover {
@@ -64,41 +150,61 @@
     font-weight: 600;
 }
 
+.nav-item svg {
+    flex-shrink: 0;
+}
+
 .sidebar-footer {
-    padding: 20px 0;
+    padding: 1.25rem 0;
     border-top: 1px solid var(--border-color);
 }
 
 .logout-btn {
     width: 100%;
     text-align: left;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-/* Main Content */
+/* ============================================
+   Main Content - Mobile First
+   ============================================ */
+
 .admin-main {
-    margin-left: 260px;
+    margin-left: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .admin-header {
     background: white;
-    padding: 25px 40px;
+    padding: 1rem;
     border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    margin-left: 4rem; /* Space for mobile menu button */
 }
 
 .admin-header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .user-info {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
+}
+
+.user-info span {
+    display: none; /* Hide on mobile */
 }
 
 .user-info img {
@@ -109,7 +215,7 @@
 }
 
 .admin-content {
-    padding: 40px;
+    padding: 1rem;
     flex: 1;
 }
 
@@ -121,27 +227,30 @@
     display: block;
 }
 
-/* Stats Grid */
+/* ============================================
+   Dashboard Stats - Mobile First (Stacked)
+   ============================================ */
+
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .stat-card {
     background: white;
-    padding: 25px;
-    border-radius: 8px;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
     box-shadow: var(--shadow);
     display: flex;
-    gap: 20px;
+    gap: 1rem;
 }
 
 .stat-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,39 +258,42 @@
 }
 
 .stat-info h3 {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--text-light);
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .stat-value {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
     font-family: var(--font-heading);
     color: var(--text-dark);
-    margin-bottom: 5px;
+    margin-bottom: 0.25rem;
 }
 
 .stat-change {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 .stat-change.positive {
     color: #2e7d32;
 }
 
-/* Dashboard Grid */
+/* ============================================
+   Dashboard Grid - Mobile First (Stacked)
+   ============================================ */
+
 .dashboard-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .chart-card {
     background: white;
-    padding: 25px;
-    border-radius: 8px;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
     box-shadow: var(--shadow);
 }
 
@@ -189,78 +301,94 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
 .card-header h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .time-filter {
-    padding: 8px 12px;
+    padding: 0.5rem 0.75rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-size: 0.9rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
 }
 
 .chart-placeholder {
-    min-height: 300px;
+    min-height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--background-lighter);
-    border-radius: 4px;
+    border-radius: 0.25rem;
+    overflow-x: auto; /* Scrollable on mobile */
+}
+
+.chart-placeholder canvas {
+    max-width: 100%;
 }
 
 .recent-orders {
     background: white;
-    padding: 25px;
-    border-radius: 8px;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
     box-shadow: var(--shadow);
 }
 
 .recent-orders h3 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .orders-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.875rem;
 }
 
 .order-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 0.875rem;
     background: var(--background-lighter);
-    border-radius: 6px;
+    border-radius: 0.375rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .order-info {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.25rem;
+    min-width: 0;
+    flex: 1;
 }
 
 .order-info strong {
     color: var(--text-dark);
+    font-size: 0.95rem;
 }
 
 .order-info span {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     color: var(--text-light);
 }
 
-/* Status Badges */
+/* ============================================
+   Status Badges
+   ============================================ */
+
 .status-badge {
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 1.25rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .status-badge.pending {
@@ -284,9 +412,9 @@
 }
 
 .role-badge {
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.8rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
     font-weight: 600;
 }
 
@@ -300,41 +428,124 @@
     color: var(--secondary-color);
 }
 
-/* Section Toolbar */
+/* ============================================
+   Product Form - Mobile First (Full Width)
+   ============================================ */
+
+.product-form-container {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.product-form-container h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+#productUploadForm > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-family: var(--font-body);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#productUploadForm button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+#productUploadSuccess {
+    display: none;
+    margin-top: 1rem;
+    padding: 0.875rem;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 0.25rem;
+    color: #155724;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Section Toolbar - Mobile First
+   ============================================ */
+
 .section-toolbar {
     display: flex;
-    gap: 15px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.section-toolbar h3 {
+    color: var(--text-dark);
+    font-size: 1.1rem;
 }
 
 .search-input {
-    flex: 1;
-    min-width: 250px;
-    padding: 12px 15px;
+    width: 100%;
+    padding: 0.75rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 0.25rem;
     font-size: 0.95rem;
 }
 
 .filter-select {
-    padding: 12px 15px;
+    width: 100%;
+    padding: 0.75rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 0.25rem;
     font-size: 0.95rem;
 }
 
-/* Data Table */
+/* ============================================
+   Data Tables - Mobile First (Scrollable)
+   ============================================ */
+
 .table-container {
     background: white;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     box-shadow: var(--shadow);
-    overflow: hidden;
+    overflow-x: auto; /* Horizontal scroll on mobile */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .data-table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 600px; /* Minimum width to trigger scroll */
 }
 
 .data-table thead {
@@ -342,41 +553,48 @@
 }
 
 .data-table th {
-    padding: 15px 20px;
+    padding: 0.875rem 1rem;
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--text-dark);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .data-table td {
-    padding: 15px 20px;
+    padding: 0.875rem 1rem;
     border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
 }
 
 .product-cell {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
+    min-width: 150px;
 }
 
 .product-cell img {
     width: 40px;
     height: 40px;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .action-btn {
-    padding: 6px 12px;
+    padding: 0.375rem 0.75rem;
     border: 1px solid var(--border-color);
     background: white;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    margin-right: 8px;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
     transition: var(--transition);
+    cursor: pointer;
+    white-space: nowrap;
+    min-height: 36px; /* Touch-friendly */
 }
 
 .action-btn:hover {
@@ -390,32 +608,35 @@
     border-color: #d32f2f;
 }
 
-/* Analytics */
+/* ============================================
+   Analytics - Mobile First (Stacked)
+   ============================================ */
+
 .analytics-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .chart-card.large {
-    grid-column: 1;
+    grid-column: auto;
 }
 
 .top-products {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 0.875rem;
+    margin-top: 1rem;
 }
 
 .product-rank {
     display: grid;
     grid-template-columns: 40px 1fr auto;
     align-items: center;
-    gap: 15px;
-    padding: 12px;
+    gap: 0.875rem;
+    padding: 0.75rem;
     background: var(--background-lighter);
-    border-radius: 6px;
+    border-radius: 0.375rem;
 }
 
 .product-rank .rank {
@@ -428,44 +649,249 @@
     align-items: center;
     justify-content: center;
     font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.product-rank span:nth-child(2) {
+    font-size: 0.9rem;
+    color: var(--text-dark);
 }
 
 .rank-value {
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
+/* ============================================
+   Buttons
+   ============================================ */
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    min-height: 48px; /* Touch-friendly */
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Small Tablets and up (640px+) */
+@media (min-width: 640px) {
+    .admin-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .user-info span {
+        display: inline; /* Show username on tablets */
+    }
+
     .stats-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
     }
-    
-    .dashboard-grid,
-    .analytics-grid {
-        grid-template-columns: 1fr;
+
+    .product-form-container {
+        padding: 1.5rem;
+    }
+
+    #productUploadForm > div:first-child {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+    }
+
+    #productUploadForm > div:nth-child(3) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.25rem;
+    }
+
+    #productUploadForm button {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .section-toolbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .search-input {
+        max-width: 300px;
+    }
+
+    .filter-select {
+        width: auto;
     }
 }
 
-@media (max-width: 768px) {
-    .admin-sidebar {
-        transform: translateX(-100%);
-        z-index: 1000;
+/* Tablets and up (768px+) */
+@media (min-width: 768px) {
+    .mobile-menu-toggle {
+        display: none;
     }
-    
+
+    .sidebar-overlay {
+        display: none;
+    }
+
+    .admin-sidebar {
+        left: 0;
+        box-shadow: none;
+    }
+
+    .admin-main {
+        margin-left: 280px;
+    }
+
+    .admin-header {
+        padding: 1.5rem 2.5rem;
+        margin-left: 0;
+    }
+
+    .admin-header h1 {
+        font-size: 2rem;
+    }
+
+    .admin-content {
+        padding: 2rem 2.5rem;
+    }
+
+    .stats-grid {
+        margin-bottom: 2rem;
+    }
+
+    .stat-card {
+        padding: 1.5rem;
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .chart-card {
+        padding: 1.5rem;
+    }
+
+    .chart-placeholder {
+        min-height: 300px;
+    }
+
+    .recent-orders {
+        padding: 1.5rem;
+    }
+
+    .analytics-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .chart-card.large {
+        grid-column: 1;
+    }
+
+    .data-table {
+        min-width: auto;
+    }
+}
+
+/* Desktop and up (1024px+) */
+@media (min-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .admin-content {
+        padding: 2.5rem;
+    }
+
+    .product-form-container {
+        padding: 2rem;
+    }
+
+    .section-toolbar {
+        margin-bottom: 1.5rem;
+    }
+
+    .chart-placeholder {
+        min-height: 350px;
+    }
+}
+
+/* Large Screens and up (1280px+) */
+@media (min-width: 1280px) {
+    .admin-sidebar {
+        width: 280px;
+    }
+
+    .admin-main {
+        margin-left: 280px;
+    }
+
+    .stats-grid {
+        gap: 2rem;
+    }
+
+    .dashboard-grid {
+        gap: 2.5rem;
+    }
+
+    .analytics-grid {
+        gap: 2.5rem;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    .admin-sidebar,
+    .mobile-menu-toggle,
+    .sidebar-overlay,
+    .admin-header {
+        display: none;
+    }
+
     .admin-main {
         margin-left: 0;
     }
-    
-    .admin-header {
-        padding: 20px;
-    }
-    
+
     .admin-content {
-        padding: 20px;
-    }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
+        padding: 0;
     }
 }
