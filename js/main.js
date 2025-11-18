@@ -105,11 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const brandName = document.querySelector('.brand-name');
     if (brandName) {
         brandName.addEventListener('click', (e) => {
-            // Prevent navigation when clicking on the brand name
-            e.preventDefault();
-            e.stopPropagation();
-            
-            // Add animation class
+            // Add animation class (allow navigation to proceed)
             brandName.classList.add('shine-active');
             
             // Remove class after animation completes (1 second)
