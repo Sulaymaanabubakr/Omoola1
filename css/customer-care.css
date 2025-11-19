@@ -1,0 +1,554 @@
+/* Customer Care Pages Styles */
+
+/* Page Hero */
+.page-hero {
+    background: linear-gradient(135deg, #2C5F2D 0%, #4a8a4c 100%);
+    color: white;
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Customer Care Navigation */
+.care-navigation {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    overflow-x: auto;
+    flex-wrap: wrap;
+}
+
+.care-nav-link {
+    padding: 10px 20px;
+    background: white;
+    color: #2C5F2D;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid #e0e0e0;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.care-nav-link:hover {
+    border-color: #2C5F2D;
+    background: #f0f7f0;
+}
+
+.care-nav-link.active {
+    background: #2C5F2D;
+    color: white;
+    border-color: #2C5F2D;
+}
+
+/* Customer Care Content */
+.customer-care-content {
+    padding: 60px 0;
+    background: white;
+}
+
+.policy-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Intro Section */
+.intro-section {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border-left: 4px solid #2C5F2D;
+}
+
+.intro-section p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.intro-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 50px;
+}
+
+.content-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #2C5F2D;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.content-section h3 {
+    color: #2C5F2D;
+    font-size: 1.4rem;
+    margin: 25px 0 15px;
+    font-weight: 600;
+}
+
+.content-section h4 {
+    color: #2C5F2D;
+    font-size: 1.1rem;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.content-section ul,
+.content-section ol {
+    margin: 15px 0 20px 20px;
+    line-height: 1.8;
+}
+
+.content-section li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.content-section a {
+    color: #2C5F2D;
+    text-decoration: underline;
+}
+
+.content-section a:hover {
+    color: #1a3a1b;
+}
+
+/* FAQ Specific Styles */
+.faq-section {
+    margin-bottom: 50px;
+}
+
+.faq-category-title {
+    font-family: 'Cormorant Garamond', serif;
+    color: #2C5F2D;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2C5F2D;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2C2C2C;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f8f9fa;
+}
+
+.faq-question.active {
+    background: #f0f7f0;
+    color: #2C5F2D;
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: #fafafa;
+}
+
+.faq-answer.active {
+    max-height: 1000px;
+    padding: 20px;
+}
+
+.faq-answer p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer a {
+    color: #2C5F2D;
+    text-decoration: underline;
+}
+
+/* Info Grid (for shipping zones, etc.) */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.info-card {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.info-card h3 {
+    color: #2C5F2D;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.info-card ul {
+    margin: 15px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+    color: #555;
+}
+
+.info-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2C5F2D;
+    font-weight: bold;
+}
+
+/* Highlight styles */
+.highlight {
+    background: #fffbea;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #2C5F2D;
+}
+
+.note {
+    background: #e8f4f8;
+    padding: 15px 20px;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+.warning-box {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.warning-box h3 {
+    color: #856404;
+    margin-top: 0;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #f0f7f0 0%, #e8f5e8 100%);
+    border: 2px solid #2C5F2D;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 40px 0;
+}
+
+.highlight-box h3 {
+    color: #2C5F2D;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+/* Tables */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pricing-table thead {
+    background: #2C5F2D;
+    color: white;
+}
+
+.pricing-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.pricing-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pricing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* Delivery Options */
+.delivery-option {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 25px 0;
+    border-left: 4px solid #2C5F2D;
+}
+
+.delivery-option h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+/* Process Steps */
+.process-step {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #2C5F2D;
+}
+
+.process-step h4 {
+    margin-top: 0;
+    color: #2C5F2D;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 30px 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #2C5F2D;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #2C5F2D;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #2C5F2D;
+}
+
+.timeline-item h4 {
+    color: #2C5F2D;
+    margin-top: 0;
+}
+
+/* Contact Options */
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.contact-option {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.contact-option h4 {
+    color: #2C5F2D;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.contact-option p {
+    margin: 8px 0;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* CTA Section */
+.faq-cta,
+.cta-section {
+    background: linear-gradient(135deg, #2C5F2D 0%, #4a8a4c 100%);
+    color: white;
+    padding: 50px 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 60px 0 0;
+}
+
+.faq-cta h2,
+.cta-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.faq-cta p,
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.faq-cta-buttons,
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 0 40px;
+    }
+    
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .care-navigation {
+        justify-content: flex-start;
+    }
+    
+    .policy-content {
+        padding: 0 20px;
+    }
+    
+    .content-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .faq-question {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    
+    .info-grid,
+    .contact-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-table {
+        font-size: 0.9rem;
+    }
+    
+    .pricing-table th,
+    .pricing-table td {
+        padding: 10px 8px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .care-nav-link {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    .intro-section,
+    .info-card,
+    .delivery-option,
+    .process-step {
+        padding: 20px;
+    }
+    
+    .faq-cta,
+    .cta-section {
+        padding: 40px 25px;
+    }
+}
