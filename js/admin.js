@@ -245,7 +245,7 @@ if (salesChart) {
     const barWidth = salesChart.width / data.length - 20;
     const barSpacing = 20;
     
-    ctx.fillStyle = '#2C5F2D';
+    ctx.fillStyle = '#6B1FA8';
     
     data.forEach((value, index) => {
         const barHeight = (value / max) * (salesChart.height - 50);
@@ -262,9 +262,9 @@ if (salesChart) {
         ctx.fillText(labels[index], x + barWidth / 2, salesChart.height - 10);
         
         // Draw value
-        ctx.fillText('£' + value, x + barWidth / 2, y - 5);
+        ctx.fillText('₦' + value, x + barWidth / 2, y - 5);
         
-        ctx.fillStyle = '#2C5F2D';
+        ctx.fillStyle = '#6B1FA8';
     });
 }
 
