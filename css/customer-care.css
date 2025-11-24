@@ -2,7 +2,7 @@
 
 /* Page Hero */
 .page-hero {
-    background: linear-gradient(135deg, #2C5F2D 0%, #4a8a4c 100%);
+    background: linear-gradient(135deg, #6B1FA8 0%, #9C4DCC 100%);
     color: white;
     padding: 100px 0 60px;
     text-align: center;
@@ -35,7 +35,7 @@
 .care-nav-link {
     padding: 10px 20px;
     background: white;
-    color: #2C5F2D;
+    color: #6B1FA8;
     text-decoration: none;
     border-radius: 6px;
     border: 2px solid #e0e0e0;
@@ -45,14 +45,14 @@
 }
 
 .care-nav-link:hover {
-    border-color: #2C5F2D;
+    border-color: #6B1FA8;
     background: #f0f7f0;
 }
 
 .care-nav-link.active {
-    background: #2C5F2D;
+    background: #6B1FA8;
     color: white;
-    border-color: #2C5F2D;
+    border-color: #6B1FA8;
 }
 
 /* Customer Care Content */
@@ -72,7 +72,7 @@
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 40px;
-    border-left: 4px solid #2C5F2D;
+    border-left: 4px solid #6B1FA8;
 }
 
 .intro-section p {
@@ -91,7 +91,7 @@
 
 .content-section h2 {
     font-family: 'Cormorant Garamond', serif;
-    color: #2C5F2D;
+    color: #6B1FA8;
     font-size: 2rem;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -99,14 +99,14 @@
 }
 
 .content-section h3 {
-    color: #2C5F2D;
+    color: #6B1FA8;
     font-size: 1.4rem;
     margin: 25px 0 15px;
     font-weight: 600;
 }
 
 .content-section h4 {
-    color: #2C5F2D;
+    color: #6B1FA8;
     font-size: 1.1rem;
     margin: 20px 0 10px;
     font-weight: 600;
@@ -130,12 +130,12 @@
 }
 
 .content-section a {
-    color: #2C5F2D;
+    color: #6B1FA8;
     text-decoration: underline;
 }
 
 .content-section a:hover {
-    color: #1a3a1b;
+    color: #4A148C;
 }
 
 /* FAQ Specific Styles */
@@ -145,11 +145,11 @@
 
 .faq-category-title {
     font-family: 'Cormorant Garamond', serif;
-    color: #2C5F2D;
+    color: #6B1FA8;
     font-size: 1.8rem;
     margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #2C5F2D;
+    border-bottom: 2px solid #6B1FA8;
 }
 
 .faq-item {
@@ -182,7 +182,7 @@
 
 .faq-question.active {
     background: #f0f7f0;
-    color: #2C5F2D;
+    color: #6B1FA8;
 }
 
 .faq-icon {
@@ -217,7 +217,7 @@
 }
 
 .faq-answer a {
-    color: #2C5F2D;
+    color: #6B1FA8;
     text-decoration: underline;
 }
 
@@ -237,7 +237,7 @@
 }
 
 .info-card h3 {
-    color: #2C5F2D;
+    color: #6B1FA8;
     font-size: 1.3rem;
     margin-bottom: 15px;
 }
@@ -258,7 +258,7 @@
     content: "✓";
     position: absolute;
     left: 0;
-    color: #2C5F2D;
+    color: #6B1FA8;
     font-weight: bold;
 }
 
@@ -268,7 +268,7 @@
     padding: 3px 8px;
     border-radius: 4px;
     font-weight: 600;
-    color: #2C5F2D;
+    color: #6B1FA8;
 }
 
 .note {
@@ -295,14 +295,14 @@
 
 .highlight-box {
     background: linear-gradient(135deg, #f0f7f0 0%, #e8f5e8 100%);
-    border: 2px solid #2C5F2D;
+    border: 2px solid #6B1FA8;
     border-radius: 8px;
     padding: 30px;
     margin: 40px 0;
 }
 
 .highlight-box h3 {
-    color: #2C5F2D;
+    color: #6B1FA8;
     margin-top: 0;
     font-size: 1.5rem;
 }
@@ -319,7 +319,7 @@
 }
 
 .pricing-table thead {
-    background: #2C5F2D;
+    background: #6B1FA8;
     color: white;
 }
 
@@ -348,7 +348,7 @@
     padding: 25px;
     border-radius: 8px;
     margin: 25px 0;
-    border-left: 4px solid #2C5F2D;
+    border-left: 4px solid #6B1FA8;
 }
 
 .delivery-option h3 {
@@ -362,12 +362,12 @@
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
-    border-left: 4px solid #2C5F2D;
+    border-left: 4px solid #6B1FA8;
 }
 
 .process-step h4 {
     margin-top: 0;
-    color: #2C5F2D;
+    color: #6B1FA8;
 }
 
 /* Timeline */
@@ -384,7 +384,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: #2C5F2D;
+    background: #6B1FA8;
 }
 
 .timeline-item {
@@ -400,13 +400,13 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #2C5F2D;
+    background: #6B1FA8;
     border: 3px solid white;
-    box-shadow: 0 0 0 2px #2C5F2D;
+    box-shadow: 0 0 0 2px #6B1FA8;
 }
 
 .timeline-item h4 {
-    color: #2C5F2D;
+    color: #6B1FA8;
     margin-top: 0;
 }
 
@@ -426,7 +426,7 @@
 }
 
 .contact-option h4 {
-    color: #2C5F2D;
+    color: #6B1FA8;
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 1.2rem;
@@ -444,7 +444,7 @@
 /* CTA Section */
 .faq-cta,
 .cta-section {
-    background: linear-gradient(135deg, #2C5F2D 0%, #4a8a4c 100%);
+    background: linear-gradient(135deg, #6B1FA8 0%, #9C4DCC 100%);
     color: white;
     padding: 50px 40px;
     border-radius: 12px;

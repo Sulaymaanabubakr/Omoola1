@@ -61,7 +61,7 @@ function renderCart() {
                     </div>
                     <div class="item-details">
                         <h3>${item.name}</h3>
-                        <p class="item-price">£${item.price.toFixed(2)} each</p>
+                        <p class="item-price">₦${item.price.toFixed(2)} each</p>
                         <div class="quantity-controls">
                             <button class="quantity-btn decrease-btn" data-index="${index}">-</button>
                             <span class="quantity-value">${item.quantity}</span>
@@ -69,7 +69,7 @@ function renderCart() {
                         </div>
                     </div>
                     <div class="item-actions">
-                        <span class="item-total">£${(item.price * item.quantity).toFixed(2)}</span>
+                        <span class="item-total">₦${(item.price * item.quantity).toFixed(2)}</span>
                         <button class="remove-btn" data-index="${index}">Remove</button>
                     </div>
                 </div>
@@ -80,16 +80,16 @@ function renderCart() {
             <h2>Order Summary</h2>
             <div class="summary-row subtotal">
                 <span>Subtotal:</span>
-                <span>£${subtotal.toFixed(2)}</span>
+                <span>₦${subtotal.toFixed(2)}</span>
             </div>
             <div class="summary-row">
                 <span>Shipping:</span>
-                <span>${shipping === 0 ? 'FREE' : '£' + shipping.toFixed(2)}</span>
+                <span>${shipping === 0 ? 'FREE' : '₦' + shipping.toFixed(2)}</span>
             </div>
-            ${shipping > 0 ? '<p style="font-size: 0.85rem; color: var(--text-light); margin-top: 10px;">Free shipping on orders over £50</p>' : ''}
+            ${shipping > 0 ? '<p style="font-size: 0.85rem; color: var(--text-light); margin-top: 10px;">Free shipping on orders over ₦50</p>' : ''}
             <div class="summary-row total">
                 <span>Total:</span>
-                <span>£${total.toFixed(2)}</span>
+                <span>₦${total.toFixed(2)}</span>
             </div>
             <button class="btn btn-primary checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
             <a href="shop.html" class="continue-shopping">← Continue Shopping</a>
