@@ -172,7 +172,7 @@ function addProductToTable(product) {
             </div>
         </td>
         <td>${product.category}</td>
-        <td>£${product.price}</td>
+        <td>₦${product.price}</td>
         <td>${product.stock}</td>
         <td><span class="status-badge active">${product.status}</span></td>
         <td>

@@ -249,7 +249,7 @@ function renderProducts(productsToRender) {
                 <h3>${product.name}</h3>
                 <p class="product-desc">${product.description}</p>
                 <div class="product-footer">
-                    <span class="price">£${product.price.toFixed(2)}</span>
+                    <span class="price">₦${product.price.toFixed(2)}</span>
                     <button class="btn btn-secondary btn-add-cart" data-product-id="${product.id}" ${!product.inStock ? 'disabled' : ''}>
                         ${product.inStock ? 'Add to Cart' : 'Out of Stock'}
                     </button>

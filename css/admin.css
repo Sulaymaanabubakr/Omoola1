@@ -289,7 +289,7 @@
 }
 
 .stat-change.positive {
-    color: #2e7d32;
+    color: #6B1FA8;
 }
 
 /* ============================================
@@ -414,13 +414,13 @@
 }
 
 .status-badge.delivered {
-    background: rgba(76, 175, 80, 0.1);
-    color: #388e3c;
+    background: rgba(107, 31, 168, 0.1);
+    color: #6B1FA8;
 }
 
 .status-badge.active {
-    background: rgba(76, 175, 80, 0.1);
-    color: #388e3c;
+    background: rgba(107, 31, 168, 0.1);
+    color: #6B1FA8;
 }
 
 .role-badge {

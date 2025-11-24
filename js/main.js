@@ -83,7 +83,7 @@ function showNotification(message, type = 'success') {
             backgroundColor = '#1976d2';
             break;
         default:
-            backgroundColor = '#2C5F2D';
+            backgroundColor = '#6B1FA8';
     }
     
     notification.style.cssText = `
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const productId = e.target.dataset.productId;
             const productName = productCard.querySelector('h3').textContent;
             const priceText = productCard.querySelector('.price').textContent;
-            const price = parseFloat(priceText.replace('£', ''));
+            const price = parseFloat(priceText.replace('₦', ''));
             const image = productCard.querySelector('img').src;
             
             addToCart(productId, productName, price, image);
