@@ -1,0 +1,7 @@
+# cPanel Deployment for Omoola Pharmacy Store
+deploy:
+  destination: public_html/omoolapharmacystores.com.ng/
+  include:
+    - "*.html"
+    - "css/**"
+    - "js/**"
